@@ -7,7 +7,7 @@ const modelos = {
 function obtenerModeloDesdeURL() {
     const params = new URLSearchParams(window.location.search);
     const modelo = params.get('modelo');
-    return (modelo && modelos[modelos]) ? modelo : 'cubo';
+    return (modelo && modelos[modelo]) ? modelo : 'cubo';
 }
 
 function cargarModelo() {
