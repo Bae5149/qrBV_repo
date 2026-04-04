@@ -1,6 +1,7 @@
 // Mapa de modelos: cada nombre de modelo apunta a su archivo GLB
 const modelos = {
-    'cubo': 'modelos/cuerpo1.glb'
+    'cubo': 'modelos/cuerpo1.glb',
+    'cubo perforado': 'modelos/cuerpo2.glb'
 };
 
 // Obtener el modelo desde la URL 
