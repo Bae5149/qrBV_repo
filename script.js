@@ -1,5 +1,6 @@
 // Mapa de modelos: cada nombre de modelo apunta a su archivo GLB
 const modelos = {
+    'cuerpo_1_prueba': 'modelos/cuerpo_1_prueba/modelo.glb',
     'cubo': 'modelos/cubo1.glb',
     'prisma_base_cuadrada': 'modelos/prisma_baseCuadrada1.glb',
     'prisma_extruido': 'modelos/cuerpo3.glb',
