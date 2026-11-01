@@ -1,13 +1,22 @@
-// Handles loading the events for <model-viewer>'s slotted progress bar
-const onProgress = (event) => {
-  const progressBar = event.target.querySelector('.progress-bar');
-  const updatingBar = event.target.querySelector('.update-bar');
-  updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
-  if (event.detail.totalProgress === 1) {
-    progressBar.classList.add('hide');
-    event.target.removeEventListener('progress', onProgress);
-  } else {
-    progressBar.classList.remove('hide');
-  }
+// Mapa de modelos: cada nombre de modelo apunta a su archivo GLB
+const modelos = {
+    'cubo': 'modelos/cubo1.glb',
+    'prisma_base_cuadrada': 'modelos/prisma_baseCuadrada1.glb',
+    'prisma_extruido': 'modelos/cuerpo3.glb'
 };
-document.querySelector('model-viewer').addEventListener('progress', onProgress);
+
+// Obtener el modelo desde la URL 
+function obtenerModeloDesdeURL() {
+    const params = new URLSearchParams(window.location.search);
+    const modelo = params.get('modelo');
+    return (modelo && modelos[modelo]) ? modelo : 'cubo';
+}
+
+function cargarModelo() {
+    const visor = document.getElementById('visor3d');
+    if(visor){
+	     visor.setAttribute('src', modelos[obtenerModeloDesdeURL()]);	
+    }
+}
+
+document.addEventListener('DOMContentLoaded', cargarModelo);
