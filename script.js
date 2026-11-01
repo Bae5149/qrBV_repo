@@ -5,7 +5,7 @@ const modelos = {
     'cubo': 'modelos/cubo1.glb',
     'prisma_base_cuadrada': 'modelos/prisma_baseCuadrada1.glb',
     'prisma_extruido': 'modelos/cuerpo3.glb',
-    'prisma_prueba': 'modelos/prisma_baseCuadrada1_pintado/modelo.glb'
+    'prisma_prueba': 'modelos/prisma_prueba/modelo.glb'
 };
 
 // Obtener el modelo desde la URL 
